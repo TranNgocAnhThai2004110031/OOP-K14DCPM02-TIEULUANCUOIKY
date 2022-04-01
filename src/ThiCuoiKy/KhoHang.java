@@ -9,7 +9,6 @@ public abstract class KhoHang {
     private String tenHang;
     private int soLuongTon;
     private double donGia;
-    private static int soLuongHangHoa;
     /**
      * 
      */
@@ -26,8 +25,8 @@ public abstract class KhoHang {
         this.setTenHang(tenHang);
         this.setSoLuongTon(soLuongTon);
         this.setDonGia(donGia);
-        this.tangSLHH();
     }
+    
     public abstract String danhGiaMDBB();
     public abstract double tinhVAT();
     /**
@@ -53,12 +52,6 @@ public abstract class KhoHang {
      */
     protected double getDonGia() {
         return donGia;
-    }
-    /**
-     * @return the soLuongHangHoa
-     */
-    protected static int getSoLuongHangHoa() {
-        return soLuongHangHoa;
     }
     /**
      * @param maHang the maHang to set
@@ -99,9 +92,6 @@ public abstract class KhoHang {
         } else {
             System.out.println("Đơn giá của hàng hoá phải lớn hơn 0!!!!");
         }
-    }
-    private void tangSLHH(){
-        soLuongHangHoa++;
     }
     /* (non-Javadoc)
      * @see java.lang.Object#toString()
