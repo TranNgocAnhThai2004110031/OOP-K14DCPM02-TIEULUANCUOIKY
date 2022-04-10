@@ -8,12 +8,24 @@ import java.text.ParseException;
 import java.util.Scanner;
 
 public class DanhSachHangHoaMain {
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args) {
         int luaChon;
         Scanner sc = new Scanner(System.in); 
  
         DanhSachHangHoa danhSachHangHoa = new DanhSachHangHoa();
-        danhSachHangHoa.duLieuMoi();
+        try {
+            danhSachHangHoa.duLieuMoi();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        
+        GhiFile ghiFile = new GhiFile();
+        // try {
+        //     ghiFile.writingFile();
+        // } catch (Exception e) {
+        //     e.printStackTrace();
+        // }
+       
         
         do {
             System.out.println("\n\t-------------------------------- Menu --------------------------------");
@@ -24,6 +36,8 @@ public class DanhSachHangHoaMain {
             System.out.println("\t5. In danh sách hàng hoá.");
             System.out.println("\t6. Thống kê kho hàng.");
             System.out.println("\t7. Báo cáo.");
+            System.out.println("\t8. Ghi file.");
+            System.out.println("\t9. Đọc file.");
             System.out.println("\t0. Thoát.");
             System.out.println("\t------------------------------------------------------------------------");
             System.out.print("\n- Vui lòng nhập lựa chọn: ");
@@ -55,7 +69,7 @@ public class DanhSachHangHoaMain {
                             case 0:
                                 return;
                             case 1:
-                                danhSachHangHoa.timTheoLoai();
+                                danhSachHangHoa.timKiemTheoLoai();
                                 break;
                             case 2:
                                 danhSachHangHoa.timKiemTheoMa();
@@ -64,6 +78,7 @@ public class DanhSachHangHoaMain {
                                 danhSachHangHoa.timKiemTheoTen();
                                 break;
                             case 4:
+                            danhSachHangHoa.timKiemTheoSoLuongTonKho();
                                 break;
                             default:
                                 break;
@@ -78,8 +93,21 @@ public class DanhSachHangHoaMain {
                     danhSachHangHoa.thongKe();
                     break;
                 case 7: 
-                    
+                    danhSachHangHoa.baoCao();
                     break;
+                case 8:
+                    try {
+                        ghiFile.writingFile();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    break;
+                case 9:
+                    try {
+                        ghiFile.readingFile();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 default:
                     break;
             }

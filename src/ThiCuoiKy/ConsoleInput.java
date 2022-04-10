@@ -28,19 +28,35 @@ public class ConsoleInput {
 
         System.out.print("- Nhập mã hàng hoá: ");
         maHang = input.nextLine();
+        // if (khoHang.getMaHang().equalsIgnoreCase(maHang)) {
+        //     System.out.println("Bạn đã nhập trùng mã hàng đã có vui lòng nhập mã khác!!!!");
+        // }
         System.out.print("- Nhập tên hàng hoá: ");
         tenHang = input.nextLine();
-        System.out.print("- Nhập số lượng tồn kho: ");
-
-        try {
-            soLuongTon = input.nextInt();
-        } catch (InputMismatchException ex) {
-            System.out.println("Bạn nhập đã bị lỗi!!!!");
-            System.out.println("Bạn vui lòng nhập số nha!!!!");
-            ex.printStackTrace();
-            input.nextLine();
-        }         
         
+            // while (true) {
+                try {
+                    System.out.print("- Nhập số lượng tồn kho: ");
+                    soLuongTon = input.nextInt();
+                } catch (InputMismatchException ex) {
+                    System.out.println("Bạn nhập đã bị lỗi!!!!");
+                    System.out.println("Bạn vui lòng nhập số nha!!!!");
+                    ex.printStackTrace();
+                    input.nextLine();
+                    // System.out.print("(Y/N)");
+                    // // input.nextLine();
+                    // if (input.nextLine().equalsIgnoreCase("n")) {
+                    //     break;
+                    // }
+                }
+            //     if (input.hasNextInt()) {
+            //         // input.close();
+            //         break;
+            //     }
+                
+            // }
+             
+        input.nextLine();
         System.out.print("- Nhập đơn giá: ");
         try {
             donGia = input.nextDouble();
@@ -118,6 +134,10 @@ public class ConsoleInput {
             khoHang = new HangSanhSu(maHang, tenHang, soLuongTon, donGia, nhaSanXuat, ngayNhapKho);
         }
         return khoHang;
+    }
+
+    public void suaHangHoa() {
+        
     }
     
 }

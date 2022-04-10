@@ -86,7 +86,7 @@ public class HangThucPham extends KhoHang{
     private boolean tinhHSD(){
         boolean isHetHan = false;
         Date ngayHienTai = new Date();
-        if(this.ngayHetHan.before(ngayHienTai)){
+        if(ngayHetHan.after(ngayHienTai)){
             isHetHan = true;
         }
         return isHetHan;
@@ -111,7 +111,7 @@ public class HangThucPham extends KhoHang{
     @Override
     public String danhGiaMDBB() {
         String str = "Không đánh giá";
-        if (this.getSoLuongTon() > 0 && tinhHSD()) {
+        if (this.getSoLuongTon() > 0 && tinhHSD() == true) {
             str = "Khó bán";
         }
         return str;

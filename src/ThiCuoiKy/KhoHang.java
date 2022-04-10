@@ -4,7 +4,9 @@
 */
 package ThiCuoiKy;
 
-public abstract class KhoHang {
+import java.io.Serializable;
+
+public abstract class KhoHang implements Serializable{
     private String maHang;
     private String tenHang;
     private int soLuongTon;
