@@ -7,7 +7,7 @@ package ThiCuoiKy;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class HangThucPham extends KhoHang{
+public class HangThucPham extends HangHoa{
     private Date ngaySanXuat;
     private Date ngayHetHan;
     private String nhaCungCap;
@@ -92,15 +92,6 @@ public class HangThucPham extends KhoHang{
         return isHetHan;
     }
     
-    /* (non-Javadoc)
-     * @see java.lang.Object#toString()
-     */
-    
-    @Override
-    public String toString() {
-        return super.toString() + "\tNgày sản xuất: " + ngayVN.format(ngaySanXuat) + "\tNgày hết hạn: "+ ngayVN.format(ngayHetHan) + "\tNhà cung cấp: " + nhaCungCap + "\tThuế VAT: " + tinhVAT() + "\tĐánh giá: " + danhGiaMDBB();
-    }
-
     @Override
     public double tinhVAT() {
         double vat;
@@ -115,5 +106,13 @@ public class HangThucPham extends KhoHang{
             str = "Khó bán";
         }
         return str;
+    }
+    /* (non-Javadoc)
+     * @see java.lang.Object#toString()
+     */
+    
+    @Override
+    public String toString() {
+        return super.toString() + "\tNgày sản xuất: " + ngayVN.format(ngaySanXuat) + "\tNgày hết hạn: "+ ngayVN.format(ngayHetHan) + "\tNhà cung cấp: " + nhaCungCap + "\tThuế VAT: " + tinhVAT() + "\tĐánh giá: " + danhGiaMDBB();
     }
 }

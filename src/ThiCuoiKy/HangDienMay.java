@@ -4,7 +4,7 @@
 */
 package ThiCuoiKy;
 
-public class HangDienMay extends KhoHang{
+public class HangDienMay extends HangHoa{
     private int thoiGianBaoHanh;
     private int congSuat;
     /**
@@ -62,14 +62,6 @@ public class HangDienMay extends KhoHang{
             System.out.println("Công suất phải lớn hơn 0!!!!");
         }
     }
-    /* (non-Javadoc)
-     * @see java.lang.Object#toString()
-     */
-    
-    @Override
-    public String toString() {
-        return super.toString() + "\tThời gian bảo hành(tháng): " + thoiGianBaoHanh + "\tCông suất: " + congSuat  + "\tThuế VAT: " + tinhVAT() + "\tĐánh giá: " + danhGiaMDBB();
-    }
     @Override
     public double tinhVAT() {
         double vat;
@@ -83,6 +75,14 @@ public class HangDienMay extends KhoHang{
             str = "Bán được";
         } 
         return str;
+    }
+    /* (non-Javadoc)
+     * @see java.lang.Object#toString()
+     */
+    
+    @Override
+    public String toString() {
+        return super.toString() + "\tThời gian bảo hành(tháng): " + thoiGianBaoHanh + "\tCông suất: " + congSuat  + "\tThuế VAT: " + tinhVAT() + "\tĐánh giá: " + danhGiaMDBB();
     }
 }
 

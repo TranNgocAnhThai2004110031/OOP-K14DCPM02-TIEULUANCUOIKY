@@ -1,7 +1,3 @@
-/*
-* created date: Mar 28, 2022
-* author: cgm
-*/
 package ThiCuoiKy;
 
 import java.text.ParseException;
@@ -10,7 +6,7 @@ import java.util.Date;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class ConsoleInput {
+public class ConsoleEdit {
     private String maHang;
     private String tenHang;
     private int soLuongTon;
@@ -23,39 +19,20 @@ public class ConsoleInput {
     public static Scanner input = new Scanner(System.in);
     SimpleDateFormat ngayVN = new SimpleDateFormat("dd/MM/yyyy");
 
-    public HangHoa inputKhoHang(){
-        HangHoa hangHoa = null;
+    public HangHoa suaHangHoa(HangHoa hangHoa){
 
-        System.out.print("- Nhập mã hàng hoá: ");
-        maHang = input.nextLine();
-        // if (khoHang.getMaHang().equalsIgnoreCase(maHang)) {
-        //     System.out.println("Bạn đã nhập trùng mã hàng đã có vui lòng nhập mã khác!!!!");
-        // }
+        maHang = hangHoa.getMaHang();
         System.out.print("- Nhập tên hàng hoá: ");
-        tenHang = input.nextLine();
-        
-            // while (true) {
-                try {
-                    System.out.print("- Nhập số lượng tồn kho: ");
-                    soLuongTon = input.nextInt();
-                } catch (InputMismatchException ex) {
-                    System.out.println("Bạn nhập đã bị lỗi!!!!");
-                    System.out.println("Bạn vui lòng nhập số nha!!!!");
-                    ex.printStackTrace();
-                    input.nextLine();
-                    // System.out.print("(Y/N)");
-                    // // input.nextLine();
-                    // if (input.nextLine().equalsIgnoreCase("n")) {
-                    //     break;
-                    // }
-                }
-            //     if (input.hasNextInt()) {
-            //         // input.close();
-            //         break;
-            //     }
-                
-            // }
-             
+        tenHang = input.nextLine();   
+        try {
+            System.out.print("- Nhập số lượng tồn kho: ");
+            soLuongTon = input.nextInt();
+        } catch (InputMismatchException ex) {
+            System.out.println("Bạn nhập đã bị lỗi!!!!");
+            System.out.println("Bạn vui lòng nhập số nha!!!!");
+            ex.printStackTrace();
+            input.nextLine();
+        }
         input.nextLine();
         System.out.print("- Nhập đơn giá: ");
         try {
@@ -134,6 +111,5 @@ public class ConsoleInput {
             hangHoa = new HangSanhSu(maHang, tenHang, soLuongTon, donGia, nhaSanXuat, ngayNhapKho);
         }
         return hangHoa;
-    }   
-     
+    } 
 }
