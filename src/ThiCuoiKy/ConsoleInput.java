@@ -8,6 +8,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class ConsoleInput {
@@ -23,12 +24,17 @@ public class ConsoleInput {
     public static Scanner input = new Scanner(System.in);
     SimpleDateFormat ngayVN = new SimpleDateFormat("dd/MM/yyyy");
 
-    public HangHoa inputKhoHang(){
-        HangHoa hangHoa = null;
+    public HangHoa inputKhoHang(List<HangHoa> hangHoa){
+        HangHoa hh = null;
        
         System.out.print("- Nhập mã hàng hoá: ");
         maHang = input.nextLine();
-        
+        for (HangHoa hangHoa2 : hangHoa) {
+            if (hangHoa2.getMaHang().equalsIgnoreCase(maHang)) {
+                System.out.println("Mã hàng hóa đã có bạn vui lòng thử lại!!!!");
+                return null;
+            }
+        }
         // if (khoHang.getMaHang().equalsIgnoreCase(maHang)) {
         //     System.out.println("Bạn đã nhập trùng mã hàng đã có vui lòng nhập mã khác!!!!");
         // }
@@ -97,7 +103,7 @@ public class ConsoleInput {
             System.out.print("- Nhập nhà cung cấp: ");
             String nhaCungCap = input.nextLine();
 
-            hangHoa  = new HangThucPham(maHang, tenHang, soLuongTon, donGia, ngaySanXuat, ngayHetHan, nhaCungCap);
+            hh  = new HangThucPham(maHang, tenHang, soLuongTon, donGia, ngaySanXuat, ngayHetHan, nhaCungCap);
         } else if (loai == 2) {
             System.out.print("- Nhập thời gia bảo hành(tháng): ");
             try {
@@ -119,7 +125,7 @@ public class ConsoleInput {
             }
             input.nextLine();
 
-            hangHoa = new HangDienMay(maHang, tenHang, soLuongTon, donGia, thoiGianBaoHanh, congSuat);
+            hh = new HangDienMay(maHang, tenHang, soLuongTon, donGia, thoiGianBaoHanh, congSuat);
         } else {
             System.out.print("- Nhập nhà sản xuất: ");
             String nhaSanXuat = input.nextLine();
@@ -133,9 +139,9 @@ public class ConsoleInput {
                 input.nextLine();
             } 
 
-            hangHoa = new HangSanhSu(maHang, tenHang, soLuongTon, donGia, nhaSanXuat, ngayNhapKho);
+            hh = new HangSanhSu(maHang, tenHang, soLuongTon, donGia, nhaSanXuat, ngayNhapKho);
         }
-        return hangHoa;
+        return hh;
     }   
 
     public HangHoa suaHangHoa(HangHoa hangHoa){

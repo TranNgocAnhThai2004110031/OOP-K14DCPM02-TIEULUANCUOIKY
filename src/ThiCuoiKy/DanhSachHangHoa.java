@@ -66,18 +66,8 @@ public class DanhSachHangHoa {
     }
 
     public void themHangHoa() {
-        quanLyHangHoa.add(consoleInput.inputKhoHang());
+        quanLyHangHoa.add(consoleInput.inputKhoHang(quanLyHangHoa));
     }  
-
-    public boolean kiemTraMaHangHoa(String ma) {
-        for (HangHoa hangHoa : quanLyHangHoa) {
-            if (hangHoa.getMaHang().equalsIgnoreCase(ma)) {
-                System.out.println("Mã hàng hóa đã bị trùng!!!");
-                return false;
-            }
-        }
-        return true;
-    }
 
     public void themTruocMaHangHoa() {
         System.out.print("- Nhập mã hàng hoá cần cần thêm trước: ");
@@ -86,8 +76,7 @@ public class DanhSachHangHoa {
         int viTri = timViTri(ma);
 
         if (viTri != -1) {
-            quanLyHangHoa.add(viTri, consoleInput.inputKhoHang());
-            System.out.println("Hàng hoá đã được thêm vào danh sách.");
+            quanLyHangHoa.add(viTri, consoleInput.inputKhoHang(quanLyHangHoa));
         } else {
             System.out.println("Mã hàng hoá cần thêm trước không có trong danh sách!!!!");
         }
@@ -102,8 +91,7 @@ public class DanhSachHangHoa {
         int viTri = timViTri(ma);
 
         if (viTri != -1) {
-            quanLyHangHoa.add(viTri + 1, consoleInput.inputKhoHang());
-            System.out.println("Hàng hoá đã được thêm vào danh sách.");
+            quanLyHangHoa.add(viTri + 1, consoleInput.inputKhoHang(quanLyHangHoa));
         } else {
             System.out.println("Mã hàng hoá cần thêm sau không có trong danh sách!!!!");
         }
