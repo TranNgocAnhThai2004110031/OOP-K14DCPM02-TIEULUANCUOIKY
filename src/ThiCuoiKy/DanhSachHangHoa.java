@@ -10,9 +10,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class DanhSachHangHoa {
-    private List<HangHoa> quanLyKhoHang = new ArrayList<>();
+    private List<HangHoa> quanLyHangHoa = new ArrayList<>();
     ConsoleInput consoleInput = new ConsoleInput();  
-    ConsoleEdit consoleEdit = new ConsoleEdit();
     DocGhiFile file = new DocGhiFile();
     /**
      * 
@@ -23,8 +22,8 @@ public class DanhSachHangHoa {
     /**
      * @param quanLyKhoHang
      */
-    public DanhSachHangHoa(List<HangHoa> quanLyKhoHang) {
-        this.quanLyKhoHang = quanLyKhoHang;
+    public DanhSachHangHoa(List<HangHoa> quanLyHangHoa) {
+        this.quanLyHangHoa = quanLyHangHoa;
     }
 
     public void duLieuMoi() throws ParseException {
@@ -47,62 +46,73 @@ public class DanhSachHangHoa {
         HangHoa hangSanhSu4 = new HangSanhSu("ss04", "Tô", 5_000, 5_000, "CTTNHH ...", consoleInput.ngayVN.parse("20/03/2022"));
         HangHoa hangSanhSu5 = new HangSanhSu("ss05", "Muỗng", 5_000, 5_000, "CTTNHH ...", consoleInput.ngayVN.parse("20/03/2022"));
 
-        quanLyKhoHang.add(hangThucPham1);
-        quanLyKhoHang.add(hangThucPham2);
-        quanLyKhoHang.add(hangThucPham3);
-        quanLyKhoHang.add(hangThucPham4);
-        quanLyKhoHang.add(hangThucPham5);
+        quanLyHangHoa.add(hangThucPham1);
+        quanLyHangHoa.add(hangThucPham2);
+        quanLyHangHoa.add(hangThucPham3);
+        quanLyHangHoa.add(hangThucPham4);
+        quanLyHangHoa.add(hangThucPham5);
 
-        quanLyKhoHang.add(hangDienMay1);
-        quanLyKhoHang.add(hangDienMay2);
-        quanLyKhoHang.add(hangDienMay3);
-        quanLyKhoHang.add(hangDienMay4);
-        quanLyKhoHang.add(hangDienMay5);
+        quanLyHangHoa.add(hangDienMay1);
+        quanLyHangHoa.add(hangDienMay2);
+        quanLyHangHoa.add(hangDienMay3);
+        quanLyHangHoa.add(hangDienMay4);
+        quanLyHangHoa.add(hangDienMay5);
 
-        quanLyKhoHang.add(hangSanhSu1);
-        quanLyKhoHang.add(hangSanhSu2);
-        quanLyKhoHang.add(hangSanhSu3);
-        quanLyKhoHang.add(hangSanhSu4);
-        quanLyKhoHang.add(hangSanhSu5);
+        quanLyHangHoa.add(hangSanhSu1);
+        quanLyHangHoa.add(hangSanhSu2);
+        quanLyHangHoa.add(hangSanhSu3);
+        quanLyHangHoa.add(hangSanhSu4);
+        quanLyHangHoa.add(hangSanhSu5);
     }
 
     public void themHangHoa() {
-        quanLyKhoHang.add(consoleInput.inputKhoHang());
+        quanLyHangHoa.add(consoleInput.inputKhoHang());
     }  
 
+    public boolean kiemTraMaHangHoa(String ma) {
+        for (HangHoa hangHoa : quanLyHangHoa) {
+            if (hangHoa.getMaHang().equalsIgnoreCase(ma)) {
+                System.out.println("Mã hàng hóa đã bị trùng!!!");
+                return false;
+            }
+        }
+        return true;
+    }
+
     public void themTruocMaHangHoa() {
-        HangHoa hangHoa = null;
         System.out.print("- Nhập mã hàng hoá cần cần thêm trước: ");
         String ma = consoleInput.input.nextLine();
 
         int viTri = timViTri(ma);
 
         if (viTri != -1) {
-            quanLyKhoHang.add(viTri - 1, hangHoa);
+            quanLyHangHoa.add(viTri, consoleInput.inputKhoHang());
             System.out.println("Hàng hoá đã được thêm vào danh sách.");
         } else {
             System.out.println("Mã hàng hoá cần thêm trước không có trong danh sách!!!!");
         }
+        return;
     }
 
     public void themSauMaHangHoa() {
-        HangHoa hangHoa = null;
-        System.out.print("- Nhập mã hàng hoá cần cần thêm trước: ");
+        System.out.print("- Nhập mã hàng hoá cần cần thêm sau: ");
         String ma = consoleInput.input.nextLine();
 
+        // hangHoa = timHangHoaTheoMa(ma);
         int viTri = timViTri(ma);
 
         if (viTri != -1) {
-            quanLyKhoHang.add(viTri + 1, hangHoa);
+            quanLyHangHoa.add(viTri + 1, consoleInput.inputKhoHang());
             System.out.println("Hàng hoá đã được thêm vào danh sách.");
         } else {
             System.out.println("Mã hàng hoá cần thêm sau không có trong danh sách!!!!");
         }
+        return;
     }
 
     public HangHoa timHangHoaTheoMa(String maHH) {
         HangHoa hangHoa = null;
-        for (HangHoa hh : quanLyKhoHang) {
+        for (HangHoa hh : quanLyHangHoa) {
             if (hh.getMaHang().toString().equalsIgnoreCase(maHH)) {
                 hangHoa = hh;
             }
@@ -121,7 +131,7 @@ public class DanhSachHangHoa {
         hangHoa = timHangHoaTheoMa(ma);
 
         if (hangHoa != null) {
-            quanLyKhoHang.remove(hangHoa);
+            quanLyHangHoa.remove(hangHoa);
             System.out.println("Hàng hoá đã được xoá khỏi danh sách.");
         } else {
             System.out.println("Mã hàng hoá cần xoá không có trong danh sách!!!!");
@@ -130,7 +140,7 @@ public class DanhSachHangHoa {
 
     public int timViTri(String maHH) {
         int viTri = -1;
-        for (HangHoa hh : quanLyKhoHang) {
+        for (HangHoa hh : quanLyHangHoa) {
             viTri++;
             if (hh.getMaHang().equalsIgnoreCase(maHH)) {
                 return viTri;
@@ -148,11 +158,12 @@ public class DanhSachHangHoa {
         int viTri = timViTri(ma);
 
         if (hangHoa != null) {
-            hangHoa = quanLyKhoHang.set(viTri, consoleEdit.suaHangHoa(hangHoa));
+            hangHoa = quanLyHangHoa.set(viTri, consoleInput.suaHangHoa(hangHoa));
             System.out.println("Hàng hoá đã được sửa.");
         } else {
             System.out.println("Mã hàng hoá cần sửa không có trong danh sách!!!!");
         }
+        return;
     }
 
     public void timKiemTheoLoai() {
@@ -160,7 +171,7 @@ public class DanhSachHangHoa {
         System.out.print("- Bạn muốn tìm hàng hoá loại nào? \n- Hàng thực phẩm - 1, hàng điện máy - 2, hàng sành sứ - 3: ");
         loai = consoleInput.input.nextInt();
         consoleInput.input.nextLine();
-        for (HangHoa hangHoa : quanLyKhoHang) {
+        for (HangHoa hangHoa : quanLyHangHoa) {
             if (loai == 1 && hangHoa instanceof HangThucPham) {
                 System.out.println(hangHoa);
             } else if (loai == 2 && hangHoa instanceof HangDienMay) {
@@ -187,8 +198,8 @@ public class DanhSachHangHoa {
         System.out.print("- Nhập tên hàng hoá cần tìm: ");
         String tenHH = consoleInput.input.nextLine();
         HangHoa hangHoa = null;
-        for (HangHoa hh : quanLyKhoHang) {
-            if (hangHoa.getTenHang().equalsIgnoreCase(tenHH)) {
+        for (HangHoa hh : quanLyHangHoa) {
+            if (hh.getTenHang().equalsIgnoreCase(tenHH)) {
                 hangHoa = hh;
                 System.out.println(hangHoa);
             }
@@ -202,7 +213,7 @@ public class DanhSachHangHoa {
         System.out.print("- Nhập số lượng tồn kho của hàng hoá cần tìm: ");
         int soLuong = consoleInput.input.nextInt();
         HangHoa hangHoa = null;
-        for (HangHoa hh : quanLyKhoHang) {
+        for (HangHoa hh : quanLyHangHoa) {
             if (hh.getSoLuongTon() == soLuong) {
                 hangHoa = hh;
                 System.out.println(hangHoa);
@@ -217,7 +228,7 @@ public class DanhSachHangHoa {
         System.out.print("- Nhập đơn giá của hàng hoá cần tìm: ");
         double donGia = consoleInput.input.nextDouble();
         HangHoa hangHoa = null;
-        for (HangHoa hh : quanLyKhoHang) {
+        for (HangHoa hh : quanLyHangHoa) {
             if (hh.getDonGia() == donGia) {
                 hangHoa = hh;
                 System.out.println(hangHoa);
@@ -231,10 +242,10 @@ public class DanhSachHangHoa {
     public void timKiemTheoKhoanGia() {
         System.out.print("- Nhập đơn giá của hàng hoá cần tìm từ: ");
         double giaNho = consoleInput.input.nextDouble();
-        System.out.println("- Đến: ");
+        System.out.print("- Đến: ");
         double gaiLon = consoleInput.input.nextDouble();
         HangHoa hangHoa = null;
-        for (HangHoa hh : quanLyKhoHang) {
+        for (HangHoa hh : quanLyHangHoa) {
             if (giaNho <= hh.getDonGia() && hh.getDonGia() <= gaiLon) {
                 hangHoa = hh;
                 System.out.println(hangHoa);
@@ -246,21 +257,16 @@ public class DanhSachHangHoa {
     }
 
     public void sapXepTangDanTheoMa() {
-        Collections.sort(quanLyKhoHang, (o1, o2) -> o1.getMaHang().compareTo(o2.getMaHang()));
+        Collections.sort(quanLyHangHoa, (o1, o2) -> o1.getMaHang().compareTo(o2.getMaHang()));
     }
 
     public void sapXepGiamDanTheoMa() {
-        Collections.sort(quanLyKhoHang, (o1, o2) -> o2.getMaHang().compareTo(o1.getMaHang()));
+        Collections.sort(quanLyHangHoa, (o1, o2) -> o2.getMaHang().compareTo(o1.getMaHang()));
     }
 
     public void ghiFile() {
-        file.writingFile(quanLyKhoHang);
+        file.writingFile(quanLyHangHoa);
     }
-
-    // public void sapXepGiamDanTheoDonGia() {
-    //     Collections.sort(quanLyKhoHang, (o1, o2) -> o2.getDonGia() < o1.getDonGia());
-
-    // }
 
     public void thongKe() {
     int tongSoLuongTonKhoHTP = 0;
@@ -269,7 +275,7 @@ public class DanhSachHangHoa {
     double donGiaHTP = 0;
     double donGiaHDM = 0;
     double donGiaHSS = 0;
-        for (HangHoa hangHoa : quanLyKhoHang) {
+        for (HangHoa hangHoa : quanLyHangHoa) {
             if (hangHoa instanceof HangThucPham) {
                 tongSoLuongTonKhoHTP += hangHoa.getSoLuongTon();
                 donGiaHTP += hangHoa.getDonGia();
@@ -301,7 +307,7 @@ public class DanhSachHangHoa {
         String strHSS = "";
         String strHSSBanCham = "";
         
-        for (HangHoa hangHoa : quanLyKhoHang) {
+        for (HangHoa hangHoa : quanLyHangHoa) {
             if (hangHoa instanceof HangThucPham) {
                 if (hangHoa.danhGiaMDBB().equalsIgnoreCase("Khó bán")) {
                     strHTPKhoBan += hangHoa.getTenHang() + "\t";
@@ -330,7 +336,7 @@ public class DanhSachHangHoa {
         System.out.println("Những loại hàng hoá không được đánh giá: " + strHSS);
     }
     public void inDanhSach() {
-        for (HangHoa hangHoa : quanLyKhoHang) {
+        for (HangHoa hangHoa : quanLyHangHoa) {
             System.out.println(hangHoa);
         }
     }

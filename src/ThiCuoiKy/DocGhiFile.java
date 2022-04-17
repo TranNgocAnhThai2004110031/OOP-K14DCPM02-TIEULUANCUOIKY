@@ -4,10 +4,12 @@
 */
 package ThiCuoiKy;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -19,22 +21,37 @@ import java.util.List;
 public class DocGhiFile {
     ConsoleInput consoleInput = new ConsoleInput();  
     public void readingFile(List<HangHoa> list) {
+        // try {
+        //     FileInputStream inFile = new FileInputStream("htp.dat");
+        //     ObjectInputStream objIn = new ObjectInputStream(inFile);
+        // } catch (Exception e) {
+        //     System.out.println("Lỗi rồi bạn ơi!!!!");
+        //     e.printStackTrace();
+        // }
         try {
-            FileInputStream inFile = new FileInputStream("htp.dat");
-            ObjectInputStream objIn = new ObjectInputStream(inFile);
-        } catch (Exception e) {
-            System.out.println("Lỗi rồi bạn ơi!!!!");
-            e.printStackTrace();
-        }
-        
+            //Bước 1: Tạo đối tượng luồng và liên kết nguồn dữ liệu
+            File f = new File("htp.dat");
+            FileReader fr = new FileReader(f);
+            //Bước 2: Đọc dữ liệu
+            BufferedReader br = new BufferedReader(fr);
+           
+            while (list != null){
+              System.out.println(list);
+            }
+            //Bước 3: Đóng luồng
+            fr.close();
+            br.close();
+           } catch (Exception ex) {
+             System.out.println("Loi doc file: "+ex);
+         }
        
         // List<HangHoa> list = (List) objIn.readObject();
 
         // chỉnh sửa, cập nhật thông tin của HangHoa
 
-        for (HangHoa khoHang: list) {
-            System.out.println(khoHang);
-        }
+        // for (HangHoa khoHang: list) {
+        //     System.out.println(khoHang);
+        // }
     
     }
 
