@@ -4,6 +4,7 @@
 */
 package ThiCuoiKy;
 
+import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -66,7 +67,13 @@ public class DanhSachHangHoa {
     }
 
     public void themHangHoa() {
-        quanLyHangHoa.add(consoleInput.inputKhoHang(quanLyHangHoa));
+        while (true) {
+            quanLyHangHoa.add(consoleInput.inputKhoHang(quanLyHangHoa));
+            System.out.print("- Bạn có muốn tiếp tục thêm(Y/N): ");
+            if (consoleInput.input.nextLine().equalsIgnoreCase("N")) {
+                return;
+            }
+        }
     }  
 
     public void themTruocMaHangHoa() {
@@ -98,10 +105,30 @@ public class DanhSachHangHoa {
         return;
     }
 
+    public void sapXepTangDanTheoDonGia() {
+        // for (HangHoa hangHoa : quanLyHangHoa) {
+        //     if (hangHoa instanceof HangThucPham) {
+        //         // Collections.sort(quanLyHangHoa, (o1, o2) -> o1.getMaHang().compareToIgnoreCase(o2.getMaHang()));
+        //         Collections.sort(quanLyHangHoa, (o1, o2) -> compare(o1, o2));
+        //     } 
+        // }
+        Collections.sort(quanLyHangHoa, (o1, o2) -> compare(o1, o2));
+    }
+
+    private int compare(HangHoa o1, HangHoa o2) {
+        if (o1.getDonGia() > o2.getDonGia()) {
+            return 1;
+        } else if (o1.getDonGia() > o2.getDonGia()) {
+            return -1;
+        } else {
+            return 0;
+        }        
+    }
+
     public HangHoa timHangHoaTheoMa(String maHH) {
         HangHoa hangHoa = null;
         for (HangHoa hh : quanLyHangHoa) {
-            if (hh.getMaHang().toString().equalsIgnoreCase(maHH)) {
+            if (hh.getMaHang().equalsIgnoreCase(maHH)) {
                 hangHoa = hh;
             }
         }
@@ -254,6 +281,10 @@ public class DanhSachHangHoa {
 
     public void ghiFile() {
         file.writingFile(quanLyHangHoa);
+    }
+
+    public void docFile() {
+        file.readingFile(quanLyHangHoa);
     }
 
     public void thongKe() {

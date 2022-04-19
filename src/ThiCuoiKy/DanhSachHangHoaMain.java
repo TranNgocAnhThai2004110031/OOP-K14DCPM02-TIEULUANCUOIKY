@@ -130,25 +130,25 @@ public class DanhSachHangHoaMain {
                         switch (key) {
                             case 1:
                                 danhSachHangHoa.sapXepTangDanTheoMa();
+                                danhSachHangHoa.inDanhSach();
                                 break;
                             case 2:
                                 danhSachHangHoa.sapXepGiamDanTheoMa();
+                                danhSachHangHoa.inDanhSach();
                                 break;
-                            
+                            case 3:
+                                danhSachHangHoa.sapXepTangDanTheoDonGia();
+                                danhSachHangHoa.inDanhSach();
                             default:
                                 break;
                         }
                     } while (key != 0);
                     break;
                 case 9:
-                    danhSachHangHoa.ghiFile();
+                    danhSachHangHoa.ghiFile();                    
                     break;
                 case 10:
-                    try {
-                        // ghiFile.readingFile();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
+                    danhSachHangHoa.docFile();
                 default:
                     break;
             }

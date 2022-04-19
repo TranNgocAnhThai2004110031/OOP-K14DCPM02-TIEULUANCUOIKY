@@ -22,100 +22,51 @@ public class DocGhiFile {
     ConsoleInput consoleInput = new ConsoleInput();  
     public void readingFile(List<HangHoa> list) {
         // try {
-        //     FileInputStream inFile = new FileInputStream("htp.dat");
-        //     ObjectInputStream objIn = new ObjectInputStream(inFile);
+        //     File file = new File("HangHoa.txt");
+
+        //     if (!file.exists()) {
+        //         file.createNewFile();
+        //     }
+
+        //     FileInputStream fileInputStream = new FileInputStream(file);
+
+        //     fileInputStream.read();
+
+        //     for (HangHoa hangHoa : list) {
+        //         System.out.println(hangHoa.toString());
+        //         fileInputStream.read();
+        //     }
+        //     fileInputStream.close();
         // } catch (Exception e) {
-        //     System.out.println("Lỗi rồi bạn ơi!!!!");
+        //     System.out.println("Loi doc file!!!!!");
         //     e.printStackTrace();
         // }
+        
         try {
-            //Bước 1: Tạo đối tượng luồng và liên kết nguồn dữ liệu
-            File f = new File("htp.dat");
+            File f = new File("HangHoa.txt");
             FileReader fr = new FileReader(f);
-            //Bước 2: Đọc dữ liệu
-            BufferedReader br = new BufferedReader(fr);
-           
-            while (list != null){
-              System.out.println(list);
+            for (HangHoa hangHoa : list) {
+                System.out.println(hangHoa.toString());
             }
-            //Bước 3: Đóng luồng
+
             fr.close();
-            br.close();
-           } catch (Exception ex) {
-             System.out.println("Loi doc file: "+ex);
-         }
-       
-        // List<HangHoa> list = (List) objIn.readObject();
-
-        // chỉnh sửa, cập nhật thông tin của HangHoa
-
-        // for (HangHoa khoHang: list) {
-        //     System.out.println(khoHang);
-        // }
-    
+        } catch (Exception e) {
+            System.out.println("Loi doc file roi ban oi!!!!!");
+            e.printStackTrace();
+        }  
     }
 
     public void writingFile(List<HangHoa> list) {
-        // HangHoa hangThucPham1 = new HangThucPham("tp01", "Rau", 0, 10000, consoleInput.ngayVN.parse("01/01/2022"), consoleInput.ngayVN.parse("11/01/2022"), "CTTNHH ...");
-        // HangHoa hangThucPham2 = new HangThucPham("tp02", "Củ", 20, 20000, consoleInput.ngayVN.parse("02/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CTTNHH ...");
-        // HangHoa hangThucPham3 = new HangThucPham("tp03", "Quả", 30, 30000, consoleInput.ngayVN.parse("03/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CTTNHH ...");
-        // HangHoa hangThucPham4 = new HangThucPham("tp04", "Bột", 40, 10000, consoleInput.ngayVN.parse("04/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CTTNHH ...");
-        // HangHoa hangThucPham5 = new HangThucPham("tp05", "Gạo", 50, 20000, consoleInput.ngayVN.parse("05/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CTTNHH ...");
-        
-        // HangHoa hangDienMay1 = new HangDienMay("dm01", "Nồi cơm điện", 2, 500_000, 12, 100);
-        // HangHoa hangDienMay2 = new HangDienMay("dm02", "Ấm đun", 1_000, 100_000, 6, 100);
-        // HangHoa hangDienMay3 = new HangDienMay("dm03", "Đèn", 1_000, 100_000, 6, 100);
-        // HangHoa hangDienMay4 = new HangDienMay("dm04", "Quạt", 1_000, 400_000, 12, 65);
-        // HangHoa hangDienMay5 = new HangDienMay("dm05", "Ổ cắm điện", 1_000, 100_000, 6, 50);
-        
-
-        // HangHoa hangSanhSu1 = new HangSanhSu("ss01", "Chén", 5_000, 10_000, "CTTNHH ...", consoleInput.ngayVN.parse("01/03/2022"));
-        // HangHoa hangSanhSu2 = new HangSanhSu("ss02", "Chén kiểu", 5_000, 10_000, "CTTNHH ...", consoleInput.ngayVN.parse("20/03/2022"));
-        // HangHoa hangSanhSu3 = new HangSanhSu("ss03", "Ly", 5_000, 10_000, "CTTNHH ...", consoleInput.ngayVN.parse("20/03/2022"));
-        // HangHoa hangSanhSu4 = new HangSanhSu("ss04", "Tô", 5_000, 5_000, "CTTNHH ...", consoleInput.ngayVN.parse("20/03/2022"));
-        // HangHoa hangSanhSu5 = new HangSanhSu("ss05", "Muỗng", 5_000, 5_000, "CTTNHH ...", consoleInput.ngayVN.parse("20/03/2022"));
-
-        // List<HangHoa> list = new ArrayList<>();
-        // list.add(hangThucPham1);
-        // list.add(hangThucPham2);
-        // list.add(hangThucPham3);
-        // list.add(hangThucPham4);
-        // list.add(hangThucPham5);
-
-        // list.add(hangDienMay1);
-        // list.add(hangDienMay2);
-        // list.add(hangDienMay3);
-        // list.add(hangDienMay4);
-        // list.add(hangDienMay5);
-
-        // list.add(hangSanhSu1);
-        // list.add(hangSanhSu2);
-        // list.add(hangSanhSu3);
-        // list.add(hangSanhSu4);
-        // list.add(hangSanhSu5);
-        // List<DanhSachHangHoa> list2 = new ArrayList<>();
-        
-        // ghi vào 1 file cụ thể
-        // ObjectOutputStream objOut;
-        // try {
-        //     FileOutputStream outFile = new FileOutputStream("htp.dat");
-        // // chuyển đối tượng sang dạng trung gian
-        //     objOut = new ObjectOutputStream(outFile);
-        // } catch (Exception e) {
-        //     //TODO: handle exception
-        // }
-        
-        // // tiến hành ghi
-        // objOut.writeObject(list);
-        // objOut.close();
-        File file = new File("htp.dat");//File
+        File file = new File("HangHoa.txt");
         PrintWriter out;
         try {
             out = new PrintWriter(file);
-            out.println(list);
+            for (HangHoa hangHoa : list) {
+                out.println(hangHoa.toString());
+            }
             out.close();
         } catch (FileNotFoundException e) {
-            System.out.println("Sai rồi bạn ơi!");
+            System.out.println("Loi ghi file roi ban oi!!!!!");
             e.printStackTrace();
         }
     }
