@@ -4,7 +4,6 @@
 */
 package ThiCuoiKy;
 
-import java.io.UnsupportedEncodingException;
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -29,24 +28,24 @@ public class DanhSachHangHoa {
 
     public void duLieuMoi(){
         try {
-            HangHoa hangThucPham1 = new HangThucPham("tp01", "Rau", 0, 10000, consoleInput.ngayVN.parse("01/01/2022"), consoleInput.ngayVN.parse("11/01/2022"), "CTTNHH ...");
-            HangHoa hangThucPham2 = new HangThucPham("tp02", "Củ", 20, 20000, consoleInput.ngayVN.parse("02/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CTTNHH ...");
-            HangHoa hangThucPham3 = new HangThucPham("tp03", "Quả", 30, 30000, consoleInput.ngayVN.parse("03/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CTTNHH ...");
-            HangHoa hangThucPham4 = new HangThucPham("tp04", "Bột", 40, 10000, consoleInput.ngayVN.parse("04/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CTTNHH ...");
-            HangHoa hangThucPham5 = new HangThucPham("tp05", "Gạo", 50, 20000, consoleInput.ngayVN.parse("05/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CTTNHH ...");
+            HangHoa hangThucPham1 = new HangThucPham("tp01", "Rau", 0, 10000, consoleInput.ngayVN.parse("01/01/2022"), consoleInput.ngayVN.parse("11/01/2022"), "CT rau sach Da Lat GAP");
+            HangHoa hangThucPham2 = new HangThucPham("tp02", "Dau", 20, 20000, consoleInput.ngayVN.parse("02/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CT rau sach Da Lat GAP");
+            HangHoa hangThucPham3 = new HangThucPham("tp03", "Qua", 30, 30000, consoleInput.ngayVN.parse("03/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CT rau sach Da Lat GAP");
+            HangHoa hangThucPham4 = new HangThucPham("tp04", "Bot mi", 40, 10000, consoleInput.ngayVN.parse("04/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CTTNHH Co phan Tien Hung");
+            HangHoa hangThucPham5 = new HangThucPham("tp05", "Gao", 50, 20000, consoleInput.ngayVN.parse("05/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CTTNHH Vua Gao");
             
-            HangHoa hangDienMay1 = new HangDienMay("dm01", "Nồi cơm điện", 2, 500_000, 12, 100);
-            HangHoa hangDienMay2 = new HangDienMay("dm02", "Ấm đun", 1_000, 100_000, 6, 100);
-            HangHoa hangDienMay3 = new HangDienMay("dm03", "Đèn", 1_000, 100_000, 6, 100);
-            HangHoa hangDienMay4 = new HangDienMay("dm04", "Quạt", 1_000, 400_000, 12, 65);
-            HangHoa hangDienMay5 = new HangDienMay("dm05", "Ổ cắm điện", 1_000, 100_000, 6, 50);
+            HangHoa hangDienMay1 = new HangDienMay("dm01", "Noi com dien", 2, 500_000, 12, 100);
+            HangHoa hangDienMay2 = new HangDienMay("dm02", "Am dun", 1_000, 100_000, 6, 100);
+            HangHoa hangDienMay3 = new HangDienMay("dm03", "Dèn", 1_000, 100_000, 6, 100);
+            HangHoa hangDienMay4 = new HangDienMay("dm04", "Quat", 1_000, 400_000, 12, 65);
+            HangHoa hangDienMay5 = new HangDienMay("dm05", "O cam dien", 1_000, 100_000, 6, 50);
             
 
-            HangHoa hangSanhSu1 = new HangSanhSu("ss01", "Chén", 5_000, 10_000, "CTTNHH ...", consoleInput.ngayVN.parse("08/04/2022"));
-            HangHoa hangSanhSu2 = new HangSanhSu("ss02", "Chén kiểu", 5, 10_000, "CTTNHH ...", consoleInput.ngayVN.parse("20/03/2022"));
-            HangHoa hangSanhSu3 = new HangSanhSu("ss03", "Ly", 5_000, 10_000, "CTTNHH ...", consoleInput.ngayVN.parse("20/03/2022"));
-            HangHoa hangSanhSu4 = new HangSanhSu("ss04", "Tô", 5_000, 5_000, "CTTNHH ...", consoleInput.ngayVN.parse("20/03/2022"));
-            HangHoa hangSanhSu5 = new HangSanhSu("ss05", "Muỗng", 5_000, 5_000, "CTTNHH ...", consoleInput.ngayVN.parse("20/03/2022"));
+            HangHoa hangSanhSu1 = new HangSanhSu("ss01", "Chen", 5_000, 10_000, "CT san xuat to chen cao cap xuat khau Chau Au, My, Nhat", consoleInput.ngayVN.parse("08/04/2022"));
+            HangHoa hangSanhSu2 = new HangSanhSu("ss02", "Chen kieu", 5, 10_000, "CT san xuat to chen cao cap xuat khau Chau Au, My, Nhat", consoleInput.ngayVN.parse("20/03/2022"));
+            HangHoa hangSanhSu3 = new HangSanhSu("ss03", "Ly", 5_000, 10_000, "CT san xuat to chen cao cap xuat khau Chau Au, My, Nhat", consoleInput.ngayVN.parse("20/03/2022"));
+            HangHoa hangSanhSu4 = new HangSanhSu("ss04", "To", 5_000, 5_000, "CT san xuat to chen cao cap xuat khau Chau Au, My, Nhat", consoleInput.ngayVN.parse("20/03/2022"));
+            HangHoa hangSanhSu5 = new HangSanhSu("ss05", "Muong", 5_000, 5_000, "CT san xuat to chen cao cap xuat khau Chau Au, My, Nhat", consoleInput.ngayVN.parse("20/03/2022"));
 
             quanLyHangHoa.add(hangThucPham1);
             quanLyHangHoa.add(hangThucPham2);
@@ -66,7 +65,7 @@ public class DanhSachHangHoa {
             quanLyHangHoa.add(hangSanhSu4);
             quanLyHangHoa.add(hangSanhSu5);
         } catch (ParseException e) {
-            System.out.println("Lỗi rồi bạn ơi!!!!");
+            System.out.println("Loi roi ban oi!!!!");
             e.printStackTrace();
         }
         
@@ -75,7 +74,7 @@ public class DanhSachHangHoa {
     public void themHangHoa() {
         while (true) {
             quanLyHangHoa.add(consoleInput.inputKhoHang(quanLyHangHoa));
-            System.out.print("- Bạn có muốn tiếp tục thêm(Y/N): ");
+            System.out.print("- Ban co muon tiep tuc them(Y/N): ");
             if (consoleInput.input.nextLine().equalsIgnoreCase("N")) {
                 return;
             }
@@ -83,7 +82,7 @@ public class DanhSachHangHoa {
     }  
 
     public void themTruocMaHangHoa() {
-        System.out.print("- Nhập mã hàng hoá cần cần thêm trước: ");
+        System.out.print("- Nhap ma hang hoa can them truoc: ");
         String ma = consoleInput.input.nextLine();
 
         int viTri = timViTri(ma);
@@ -91,13 +90,13 @@ public class DanhSachHangHoa {
         if (viTri != -1) {
             quanLyHangHoa.add(viTri, consoleInput.inputKhoHang(quanLyHangHoa));
         } else {
-            System.out.println("Mã hàng hoá cần thêm trước không có trong danh sách!!!!");
+            System.out.println("Ma hang hoa can them truoc khong co trong danh sach!!!!");
         }
         return;
     }
 
     public void themSauMaHangHoa() {
-        System.out.print("- Nhập mã hàng hoá cần cần thêm sau: ");
+        System.out.print("- Nhap ma hang hoa can them sau: ");
         String ma = consoleInput.input.nextLine();
 
         int viTri = timViTri(ma);
@@ -105,7 +104,7 @@ public class DanhSachHangHoa {
         if (viTri != -1) {
             quanLyHangHoa.add(viTri + 1, consoleInput.inputKhoHang(quanLyHangHoa));
         } else {
-            System.out.println("Mã hàng hoá cần thêm sau không có trong danh sách!!!!");
+            System.out.println("Ma hang hoa can them sau khong co trong danh sach!!!!");
         }
         return;
     }
@@ -118,23 +117,23 @@ public class DanhSachHangHoa {
             }
         }
         if (hangHoa == null) {
-            System.out.println("Mã hàng hoá cần tìm không có trong danh sách!!!!");
+            System.out.println("Ma hang hoa can tim khong co trong danh sach!!!!");
         }
         return hangHoa;
     }
 
     public void xoaHangHoaTheoMa() {
         HangHoa hangHoa = null;
-        System.out.print("- Nhập mã hàng hoá cần xoá: ");
+        System.out.print("- Nhap ma hang hoa can xoa: ");
         String ma = consoleInput.input.nextLine();
 
         hangHoa = timHangHoaTheoMa(ma);
 
         if (hangHoa != null) {
             quanLyHangHoa.remove(hangHoa);
-            System.out.println("Hàng hoá đã được xoá khỏi danh sách.");
+            System.out.println("Hang hoa da duoc xoa khoi danh sach.");
         } else {
-            System.out.println("Mã hàng hoá cần xoá không có trong danh sách!!!!");
+            System.out.println("Ma hang hoa can xoa khong co trong danh sach!!!!");
         }
     }
 
@@ -151,7 +150,7 @@ public class DanhSachHangHoa {
 
     public void suaHangHoaTheoMa(){
         HangHoa hangHoa = null;
-        System.out.print("- Nhập mã hàng hoá cần sửa: ");
+        System.out.print("- Nhap ma hang hoa can sua: ");
         String ma = consoleInput.input.nextLine();
 
         hangHoa = timHangHoaTheoMa(ma);
@@ -159,16 +158,16 @@ public class DanhSachHangHoa {
 
         if (hangHoa != null) {
             hangHoa = quanLyHangHoa.set(viTri, consoleInput.suaHangHoa(hangHoa));
-            System.out.println("Hàng hoá đã được sửa.");
+            System.out.println("Hang hoa da duoc sua.");
         } else {
-            System.out.println("Mã hàng hoá cần sửa không có trong danh sách!!!!");
+            System.out.println("Ma hang hoa can sua khong co trong danh sach!!!!");
         }
         return;
     }
 
     public void timKiemTheoLoai() {
         int loai;
-        System.out.print("- Bạn muốn tìm hàng hoá loại nào? \n- Hàng thực phẩm - 1, hàng điện máy - 2, hàng sành sứ - 3: ");
+        System.out.print("- Ban muon tim hang hoa loai nao? \n- Hang thuc pham - 1, hang dien may - 2, hang sanh su - 3: ");
         loai = consoleInput.input.nextInt();
         consoleInput.input.nextLine();
         for (HangHoa hangHoa : quanLyHangHoa) {
@@ -183,19 +182,19 @@ public class DanhSachHangHoa {
     }
     
     public void timKiemTheoMa() {
-        System.out.print("- Nhập mã hàng hoá cần tìm: ");
+        System.out.print("- Nhap ma hang hoa can tim: ");
         String maHH = consoleInput.input.nextLine();
         HangHoa hangHoa = null;
         hangHoa = timHangHoaTheoMa(maHH);
         if (hangHoa == null) {
-            System.out.println("Mã hàng hoá cần tìm không có trong danh sách!!!!");
+            System.out.println("Ma hang hoa can tim khong co trong danh sach!!!!");
         } else {
             System.out.println(hangHoa);
         }
     }
 
     public void timKiemTheoTen() {
-        System.out.print("- Nhập tên hàng hoá cần tìm: ");
+        System.out.print("- Nhap ten hang hoa can tim: ");
         String tenHH = consoleInput.input.nextLine();
         HangHoa hangHoa = null;
         for (HangHoa hh : quanLyHangHoa) {
@@ -205,12 +204,12 @@ public class DanhSachHangHoa {
             }
         }
         if (hangHoa == null) {
-            System.out.println("Tên hàng hoá cần tìm không có trong danh sách!!!!");
+            System.out.println("Ten hang hoa can tim khong co trong danh sach!!!!");
         }
     }
 
     public void timKiemTheoSoLuongTonKho() {
-        System.out.print("- Nhập số lượng tồn kho của hàng hoá cần tìm: ");
+        System.out.print("- Nhap so luong ton kho cua hang hoa can tim: ");
         int soLuong = consoleInput.input.nextInt();
         HangHoa hangHoa = null;
         for (HangHoa hh : quanLyHangHoa) {
@@ -220,12 +219,12 @@ public class DanhSachHangHoa {
             }
         }
         if (hangHoa == null) {
-            System.out.println("Số lượng hàng hoá tồn kho bạn cần tìm không có trong danh sách!!!!");
+            System.out.println("So luong hang hoa ton kho ban can tim khong co trong danh sach!!!!");
         }
     }
 
     public void timKiemTheoDonGia() {
-        System.out.print("- Nhập đơn giá của hàng hoá cần tìm: ");
+        System.out.print("- Nhap don gia cua hang hoa can tim: ");
         double donGia = consoleInput.input.nextDouble();
         HangHoa hangHoa = null;
         for (HangHoa hh : quanLyHangHoa) {
@@ -235,14 +234,14 @@ public class DanhSachHangHoa {
             }
         }
         if (hangHoa == null) {
-            System.out.println("Đơn giá bạn cần tìm không có trong danh sách!!!!");
+            System.out.println("Don gia ban can tim khong co trong danh sach!!!!");
         }
     }
 
     public void timKiemTheoKhoanGia() {
-        System.out.print("- Nhập đơn giá của hàng hoá cần tìm từ: ");
+        System.out.print("- Nhap don gia cua hang hoa can tim tu: ");
         double giaNho = consoleInput.input.nextDouble();
-        System.out.print("- Đến: ");
+        System.out.print("- Den: ");
         double gaiLon = consoleInput.input.nextDouble();
         HangHoa hangHoa = null;
         for (HangHoa hh : quanLyHangHoa) {
@@ -252,7 +251,7 @@ public class DanhSachHangHoa {
             }
         }
         if (hangHoa == null) {
-            System.out.println("Đơn giá bạn cần tìm không có trong danh sách!!!!");
+            System.out.println("Don gia ban can tim khong co trong danh sach!!!!");
         }
     }
 
@@ -265,14 +264,14 @@ public class DanhSachHangHoa {
     }
 
     public void sapXepTangDanTheoDonGia() {
-        Collections.sort(quanLyHangHoa, (o1, o2) -> compare(o1, o2));
+        Collections.sort(quanLyHangHoa, (o1, o2) -> sortDonGia(o1, o2));
     }
     
     public void sapXepGiamDanTheoDonGia() {
-        Collections.sort(quanLyHangHoa, (o1, o2) -> compare(o2, o1));
+        Collections.sort(quanLyHangHoa, (o1, o2) -> sortDonGia(o2, o1));
     }
 
-    private int compare(HangHoa o1, HangHoa o2) {
+    private int sortDonGia(HangHoa o1, HangHoa o2) {
         if (o1.getDonGia() > o2.getDonGia()) {
             return 1;
         } else if (o1.getDonGia() < o2.getDonGia()) {
@@ -291,12 +290,13 @@ public class DanhSachHangHoa {
     }
 
     public void thongKe() {
-    int tongSoLuongTonKhoHTP = 0;
-    int tongSoLuongTonKhoHDM = 0;
-    int tongSoLuongTonKhoHSS = 0;
-    double donGiaHTP = 0;
-    double donGiaHDM = 0;
-    double donGiaHSS = 0;
+        int tongSoLuongTonKhoHTP = 0;
+        int tongSoLuongTonKhoHDM = 0;
+        int tongSoLuongTonKhoHSS = 0;
+        double donGiaHTP = 0;
+        double donGiaHDM = 0;
+        double donGiaHSS = 0;
+
         for (HangHoa hangHoa : quanLyHangHoa) {
             if (hangHoa instanceof HangThucPham) {
                 tongSoLuongTonKhoHTP += hangHoa.getSoLuongTon();
@@ -310,15 +310,15 @@ public class DanhSachHangHoa {
             }
         }
 
-        System.err.println("\t---------------Thống kê kho hàng---------------");
-        System.out.println("Tổng số lượng tồn kho hàng thực phẩm: " + tongSoLuongTonKhoHTP);
-        System.out.println("Tổng số lượng tồn kho hàng điện máy: " + tongSoLuongTonKhoHDM);
-        System.out.println("Tổng số lượng tồn kho hàng sành sứ: " + tongSoLuongTonKhoHSS);
-        System.out.println("Tổng số lượng tồn kho của kho hàng: " + (tongSoLuongTonKhoHTP + tongSoLuongTonKhoHDM + tongSoLuongTonKhoHSS));
-        System.out.println("Tổng đơn giá của hàng thực phẩm: " + donGiaHTP);
-        System.out.println("Tổng đơn giá của hàng điện máy: " + donGiaHDM);
-        System.out.println("Tổng đơn giá của kho hàng sành sứ: " + donGiaHSS);
-        System.out.println("Tổng đơn giá của kho hàng: " + (donGiaHTP + donGiaHDM + donGiaHSS));
+        System.err.println("\t---------------Thong ke kho hang---------------");
+        System.out.println("Tong so luong ton kho hang thuc pham: " + tongSoLuongTonKhoHTP);
+        System.out.println("Tong so luong ton kho hang dien may: " + tongSoLuongTonKhoHDM);
+        System.out.println("Tong so luong ton kho hang sanh su: " + tongSoLuongTonKhoHSS);
+        System.out.println("Tong so luong ton kho cua kho hang: " + (tongSoLuongTonKhoHTP + tongSoLuongTonKhoHDM + tongSoLuongTonKhoHSS));
+        System.out.println("Tong đon gia cua hang thuc pham: " + donGiaHTP);
+        System.out.println("Tong đon gia cua hang dien may: " + donGiaHDM);
+        System.out.println("Tong đon gia cua kho hang sanh su: " + donGiaHSS);
+        System.out.println("Tong đon gia cua kho hang: " + (donGiaHTP + donGiaHDM + donGiaHSS));
     }
 
     public void baoCao() {
@@ -350,12 +350,12 @@ public class DanhSachHangHoa {
                 }
             }
         }
-        System.out.println("Những loại hàng hoá được đánh giá khó bán: " + strHTPKhoBan);
-        System.out.println("Những loại hàng hoá không được đánh giá: " + strHTP);
-        System.out.println("Những loại hàng hoá được đánh giá bán được: " + strHDMBanDuoc);
-        System.out.println("Những loại hàng hoá không được đánh giá: " + strHDM);
-        System.out.println("Những loại hàng hoá được đánh giá bán chậm: " + strHSSBanCham);
-        System.out.println("Những loại hàng hoá không được đánh giá: " + strHSS);
+        System.out.println("Nhung loai hang hoa duoc danh gia kho ban: " + strHTPKhoBan);
+        System.out.println("Nhung loai hang hoa khong duoc danh gia: " + strHTP);
+        System.out.println("Nhung loai hang hoa duoc danh gia ban duoc: " + strHDMBanDuoc);
+        System.out.println("Nhung loai hang hoa khong duoc danh gia: " + strHDM);
+        System.out.println("Nhung loai hang hoa duoc danh gia ban cham: " + strHSSBanCham);
+        System.out.println("Nhung loai hang hoa khong duoc danh gia: " + strHSS);
     }
     public void inDanhSach() {
         for (HangHoa hangHoa : quanLyHangHoa) {

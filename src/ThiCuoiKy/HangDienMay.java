@@ -43,7 +43,7 @@ public class HangDienMay extends HangHoa{
         if (thoiGianBaoHanh >= 0) {
             this.thoiGianBaoHanh = thoiGianBaoHanh;
         } else {
-            System.out.println("Thời gian bảo hành phải lớn hơn hoặc bằng 0!!!!");
+            System.out.println("Thoi gian bao hanh phai lon hon hoac bang 0!!!!");
         }
     }
     /**
@@ -59,7 +59,7 @@ public class HangDienMay extends HangHoa{
         if (congSuat > 0) {
             this.congSuat = congSuat;
         } else {
-            System.out.println("Công suất phải lớn hơn 0!!!!");
+            System.out.println("Cong suat phai lon hon 0!!!!");
         }
     }
     @Override

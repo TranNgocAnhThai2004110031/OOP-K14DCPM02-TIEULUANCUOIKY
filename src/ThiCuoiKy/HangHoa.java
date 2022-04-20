@@ -60,7 +60,7 @@ public abstract class HangHoa {
         if(maHang != null){
             this.maHang = maHang;
         }else{
-            System.out.println("Mã hàng hoá không được để trống!!!!");
+            System.out.println("Ma hang hoa khong duoc de trong!!!!");
         }
     }
     /**
@@ -70,7 +70,7 @@ public abstract class HangHoa {
         if (tenHang != null) {
             this.tenHang = tenHang;
         } else {
-            System.out.println("Tên hàng hoá không được để trống!!!!");
+            System.out.println("Ten hang hoa khong duoc de trong!!!!");
         }
     }
     /**
@@ -80,7 +80,7 @@ public abstract class HangHoa {
         if (soLuongTon >= 0) {
             this.soLuongTon = soLuongTon;
         } else {
-            System.out.println("Số lượng hàng hoá tồn kho phải lớn hơn hoặc bằng 0!!!!");
+            System.out.println("So luong hang hoa ton kho phai lon hon hoac bang 0!!!!");
         }
     }
     /**
@@ -90,7 +90,7 @@ public abstract class HangHoa {
         if (donGia > 0) {
             this.donGia = donGia;
         } else {
-            System.out.println("Đơn giá của hàng hoá phải lớn hơn 0!!!!");
+            System.out.println("Don gia cua hang hoa phai lon hon 0!!!!");
         }
     }
     /* (non-Javadoc)

@@ -63,7 +63,7 @@ public class HangThucPham extends HangHoa{
         if (ngayHetHan.after(ngaySanXuat) || ngayHetHan.compareTo(ngaySanXuat) == 0) {
             this.ngayHetHan = ngayHetHan;
         } else {
-            System.out.println("Ngày hết hạn phải sau hoặc là ngày sản xuất không được trước ngày sản xuất!!!!");
+            System.out.println("Ngay het han phai sau hoac la ngay san xuat khong duoc truoc ngay san xuat!!!!");
         }
     }
     /**

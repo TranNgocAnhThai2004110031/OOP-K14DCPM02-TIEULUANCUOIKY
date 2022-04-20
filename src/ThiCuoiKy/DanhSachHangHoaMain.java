@@ -18,31 +18,31 @@ public class DanhSachHangHoaMain {
 
         do {
             System.out.println("\n\t-------------------------------- Menu --------------------------------");
-            System.out.println("\t1. Thêm hàng hoá.");
-            System.out.println("\t2. Xoá hàng hoá.");
-            System.out.println("\t3. Sửa hàng hoá.");
-            System.out.println("\t4. In danh sách hàng hoá.");
-            System.out.println("\t5. Tìm kiếm hàng hoá.");
-            System.out.println("\t6. Thống kê kho hàng.");
-            System.out.println("\t7. Báo cáo.");
-            System.out.println("\t8. Sắp xếp hàng hóa.");
+            System.out.println("\t1. Them hang hoa.");
+            System.out.println("\t2. Xoa hang hoa.");
+            System.out.println("\t3. Sua hang hoa.");
+            System.out.println("\t4. In danh sach hang hoa.");
+            System.out.println("\t5. Tim kiem hang hoa.");
+            System.out.println("\t6. Thong ke kho hang.");
+            System.out.println("\t7. Bao cao.");
+            System.out.println("\t8. Sap xep hang hoa.");
             System.out.println("\t9. Ghi file.");
-            System.out.println("\t10. Đọc file.");
-            System.out.println("\t0. Thoát.");
+            System.out.println("\t10. Doc file.");
+            System.out.println("\t0. Thoat.");
             System.out.println("\t------------------------------------------------------------------------");
-            System.out.print("\n- Vui lòng nhập lựa chọn: ");
+            System.out.print("\n- Vui long nhap lua chon: ");
             luaChon = sc.nextInt();
             sc.nextLine();
             switch (luaChon) {
                 case 1:
                     do {
-                        System.out.println("\n\t-------------------------------- Menu --------------------------------");
-                        System.out.println("\t1. Thêm hàng hóa.");
-                        System.out.println("\t2. Thêm hàng hóa trước mã hàng hóa.");
-                        System.out.println("\t3. Thêm hàng hóa sau mã hàng hóa.");
-                        System.out.println("\t0. Thoát.");
-                        System.out.println("\t------------------------------------------------------------------------");
-                        System.out.print("\n- Vui lòng nhập lựa chọn: ");
+                        System.out.println("\n\t---------- Menu them hang hoa ----------");
+                        System.out.println("\t1. Them hang hoa.");
+                        System.out.println("\t2. Them hang hoa truoc ma hang hoa.");
+                        System.out.println("\t3. Them hang hoa sau ma hang hoa.");
+                        System.out.println("\t0. Thoat.");
+                        System.out.println("\t------------------------------------------");
+                        System.out.print("\n- Vui long nhap lua chon: ");
                         key = sc.nextInt();
                         sc.nextLine();
                         switch (key) {
@@ -71,16 +71,16 @@ public class DanhSachHangHoaMain {
                     break;
                 case 5:
                     do {
-                        System.out.println("\n\t-------------------------------- Menu --------------------------------");
-                        System.out.println("\t1. Tìm hàng hoá theo loại hàng.");
-                        System.out.println("\t2. Tìm kiếm hàng hoá theo mã hàng hoá.");
-                        System.out.println("\t3. Tìm kiếm hàng hoá theo tên hàng hoá.");
-                        System.out.println("\t4. Tìm kiếm hàng hoá theo số lượng tồn kho.");
-                        System.out.println("\t5. Tìm kiếm hàng hoá theo đơn giá.");
-                        System.out.println("\t6. Tìm kiếm hàng hoá theo khoản đơn giá.");
-                        System.out.println("\t0. Thoát.");
-                        System.out.println("\t------------------------------------------------------------------------");
-                        System.out.print("\n- Vui lòng nhập lựa chọn: ");
+                        System.out.println("\n\t------------ Menu tim kiem hang ho--------------");
+                        System.out.println("\t1. Tim kiem hang hoa theo loai hang.");
+                        System.out.println("\t2. Tim kiem hang hoa theo ma hang hoa.");
+                        System.out.println("\t3. Tim kiem hang hoa theo ten hang hoa.");
+                        System.out.println("\t4. Tim kiem hang hoa theo so luong ton kho.");
+                        System.out.println("\t5. Tim kiem hang hoa theo don gia.");
+                        System.out.println("\t6. Tim kiem hang hoa theo khoan don gia.");
+                        System.out.println("\t0. Thoat.");
+                        System.out.println("\t--------------------------------------------------");
+                        System.out.print("\n- Vui long nhap lua chon: ");
                         key = sc.nextInt();
                         sc.nextLine();
                         switch (key) {
@@ -115,14 +115,14 @@ public class DanhSachHangHoaMain {
                     break;
                 case 8:
                     do {
-                        System.out.println("\n\t-------------------------------- Menu --------------------------------");
-                        System.out.println("\t1. Sắp xếp hàng hóa tăng dần theo mã.");
-                        System.out.println("\t2. Sắp xếp hàng hóa giảm dần theo mã.");
-                        System.out.println("\t3. Sắp xếp hàng hóa tăng dần theo đơn giá.");
-                        System.out.println("\t4. Sắp xếp hàng hóa giảm dần theo đơn giá.");
-                        System.out.println("\t0. Thoát.");
-                        System.out.println("\t------------------------------------------------------------------------");
-                        System.out.print("\n- Vui lòng nhập lựa chọn: ");
+                        System.out.println("\n\t----------- Menu sap xep hang hoa -------------");
+                        System.out.println("\t1. Sap xep hang hoa tang dan theo ma.");
+                        System.out.println("\t2. Sap xep hang hoa giam dan theo ma.");
+                        System.out.println("\t3. Sap xep hang hoa tang dan theo don gia.");
+                        System.out.println("\t4. Sap xep hang hoa giam dan theo don gia.");
+                        System.out.println("\t0. Thoat.");
+                        System.out.println("\t-------------------------------------------------");
+                        System.out.print("\n- Vui long nhap lua chon: ");
                         key = sc.nextInt();
                         sc.nextLine();
                         switch (key) {

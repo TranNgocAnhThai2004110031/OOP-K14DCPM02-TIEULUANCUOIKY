@@ -12,28 +12,7 @@ import java.util.List;
 
 public class DocGhiFile {
     ConsoleInput consoleInput = new ConsoleInput();  
-    public void readingFile(List<HangHoa> list) {
-        // try {
-        //     File file = new File("HangHoa.txt");
-
-        //     if (!file.exists()) {
-        //         file.createNewFile();
-        //     }
-
-        //     FileInputStream fileInputStream = new FileInputStream(file);
-
-        //     fileInputStream.read();
-
-        //     for (HangHoa hangHoa : list) {
-        //         System.out.println(hangHoa.toString());
-        //         fileInputStream.read();
-        //     }
-        //     fileInputStream.close();
-        // } catch (Exception e) {
-        //     System.out.println("Loi doc file!!!!!");
-        //     e.printStackTrace();
-        // }
-        
+    public void readingFile(List<HangHoa> list) {        
         try {
             File f = new File("HangHoa.txt");
             FileReader fr = new FileReader(f);
