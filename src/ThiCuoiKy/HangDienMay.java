@@ -70,9 +70,9 @@ public class HangDienMay extends HangHoa{
     }
     @Override
     public String danhGiaMDBB() {
-        String str = "Không đánh giá";
+        String str = "Khong danh gia";
         if (this.getSoLuongTon() < 3) {
-            str = "Bán được";
+            str = "Ban duoc";
         } 
         return str;
     }
@@ -82,7 +82,7 @@ public class HangDienMay extends HangHoa{
     
     @Override
     public String toString() {
-        return super.toString() + "\tThời gian bảo hành(tháng): " + thoiGianBaoHanh + "\tCông suất: " + congSuat  + "\tThuế VAT: " + tinhVAT() + "\tĐánh giá: " + danhGiaMDBB();
+        return super.toString() + "\tThoi gian bao hanh(thang): " + thoiGianBaoHanh + "\tCong suat: " + congSuat  + "\tThue VAT: " + tinhVAT() + "\tDanh gia: " + danhGiaMDBB();
     }
 }
 

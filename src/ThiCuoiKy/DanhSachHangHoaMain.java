@@ -4,7 +4,6 @@
 */
 package ThiCuoiKy;
 
-import java.text.ParseException;
 import java.util.Scanner;
 
 public class DanhSachHangHoaMain {
@@ -14,12 +13,9 @@ public class DanhSachHangHoaMain {
         Scanner sc = new Scanner(System.in); 
  
         DanhSachHangHoa danhSachHangHoa = new DanhSachHangHoa();
-        try {
-            danhSachHangHoa.duLieuMoi();
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }       
         
+        danhSachHangHoa.duLieuMoi();
+
         do {
             System.out.println("\n\t-------------------------------- Menu --------------------------------");
             System.out.println("\t1. Thêm hàng hoá.");
@@ -122,6 +118,8 @@ public class DanhSachHangHoaMain {
                         System.out.println("\n\t-------------------------------- Menu --------------------------------");
                         System.out.println("\t1. Sắp xếp hàng hóa tăng dần theo mã.");
                         System.out.println("\t2. Sắp xếp hàng hóa giảm dần theo mã.");
+                        System.out.println("\t3. Sắp xếp hàng hóa tăng dần theo đơn giá.");
+                        System.out.println("\t4. Sắp xếp hàng hóa giảm dần theo đơn giá.");
                         System.out.println("\t0. Thoát.");
                         System.out.println("\t------------------------------------------------------------------------");
                         System.out.print("\n- Vui lòng nhập lựa chọn: ");
@@ -138,6 +136,9 @@ public class DanhSachHangHoaMain {
                                 break;
                             case 3:
                                 danhSachHangHoa.sapXepTangDanTheoDonGia();
+                                danhSachHangHoa.inDanhSach();
+                            case 4:
+                                danhSachHangHoa.sapXepGiamDanTheoDonGia();
                                 danhSachHangHoa.inDanhSach();
                             default:
                                 break;

@@ -4,9 +4,7 @@
 */
 package ThiCuoiKy;
 
-import java.io.Serializable;
-
-public abstract class HangHoa implements Serializable{
+public abstract class HangHoa {
     private String maHang;
     private String tenHang;
     private int soLuongTon;
@@ -101,6 +99,6 @@ public abstract class HangHoa implements Serializable{
     
     @Override
     public String toString() {
-        return "Mã hàng: " + maHang +"\tTên hàng: " + tenHang + "\tSố lượng tồn kho:" + soLuongTon +"\tĐơn giá: " + donGia;
+        return "Ma hang: " + maHang +"\tTen hang: " + tenHang + "\tSo luong ton kho:" + soLuongTon +"\tDon gia: " + donGia;
     }
 }

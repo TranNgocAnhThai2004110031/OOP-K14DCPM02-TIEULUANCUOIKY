@@ -101,9 +101,9 @@ public class HangThucPham extends HangHoa{
 
     @Override
     public String danhGiaMDBB() {
-        String str = "Không đánh giá";
+        String str = "Khong danh gia";
         if (this.getSoLuongTon() > 0 && tinhHSD() == true) {
-            str = "Khó bán";
+            str = "Kho ban";
         }
         return str;
     }
@@ -113,6 +113,6 @@ public class HangThucPham extends HangHoa{
     
     @Override
     public String toString() {
-        return super.toString() + "\tNgày sản xuất: " + ngayVN.format(ngaySanXuat) + "\tNgày hết hạn: "+ ngayVN.format(ngayHetHan) + "\tNhà cung cấp: " + nhaCungCap + "\tThuế VAT: " + tinhVAT() + "\tĐánh giá: " + danhGiaMDBB();
+        return super.toString() + "\tNgay san xuat: " + ngayVN.format(ngaySanXuat) + "\tNgay het han: "+ ngayVN.format(ngayHetHan) + "\tNha cung cap: " + nhaCungCap + "\tThue VAT: " + tinhVAT() + "\tDanh gia: " + danhGiaMDBB();
     }
 }

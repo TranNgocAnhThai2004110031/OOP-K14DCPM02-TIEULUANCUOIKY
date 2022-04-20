@@ -27,43 +27,49 @@ public class DanhSachHangHoa {
         this.quanLyHangHoa = quanLyHangHoa;
     }
 
-    public void duLieuMoi() throws ParseException {
-        HangHoa hangThucPham1 = new HangThucPham("tp01", "Rau", 0, 10000, consoleInput.ngayVN.parse("01/01/2022"), consoleInput.ngayVN.parse("11/01/2022"), "CTTNHH ...");
-        HangHoa hangThucPham2 = new HangThucPham("tp02", "Củ", 20, 20000, consoleInput.ngayVN.parse("02/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CTTNHH ...");
-        HangHoa hangThucPham3 = new HangThucPham("tp03", "Quả", 30, 30000, consoleInput.ngayVN.parse("03/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CTTNHH ...");
-        HangHoa hangThucPham4 = new HangThucPham("tp04", "Bột", 40, 10000, consoleInput.ngayVN.parse("04/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CTTNHH ...");
-        HangHoa hangThucPham5 = new HangThucPham("tp05", "Gạo", 50, 20000, consoleInput.ngayVN.parse("05/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CTTNHH ...");
+    public void duLieuMoi(){
+        try {
+            HangHoa hangThucPham1 = new HangThucPham("tp01", "Rau", 0, 10000, consoleInput.ngayVN.parse("01/01/2022"), consoleInput.ngayVN.parse("11/01/2022"), "CTTNHH ...");
+            HangHoa hangThucPham2 = new HangThucPham("tp02", "Củ", 20, 20000, consoleInput.ngayVN.parse("02/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CTTNHH ...");
+            HangHoa hangThucPham3 = new HangThucPham("tp03", "Quả", 30, 30000, consoleInput.ngayVN.parse("03/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CTTNHH ...");
+            HangHoa hangThucPham4 = new HangThucPham("tp04", "Bột", 40, 10000, consoleInput.ngayVN.parse("04/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CTTNHH ...");
+            HangHoa hangThucPham5 = new HangThucPham("tp05", "Gạo", 50, 20000, consoleInput.ngayVN.parse("05/03/2022"), consoleInput.ngayVN.parse("11/11/2022"), "CTTNHH ...");
+            
+            HangHoa hangDienMay1 = new HangDienMay("dm01", "Nồi cơm điện", 2, 500_000, 12, 100);
+            HangHoa hangDienMay2 = new HangDienMay("dm02", "Ấm đun", 1_000, 100_000, 6, 100);
+            HangHoa hangDienMay3 = new HangDienMay("dm03", "Đèn", 1_000, 100_000, 6, 100);
+            HangHoa hangDienMay4 = new HangDienMay("dm04", "Quạt", 1_000, 400_000, 12, 65);
+            HangHoa hangDienMay5 = new HangDienMay("dm05", "Ổ cắm điện", 1_000, 100_000, 6, 50);
+            
+
+            HangHoa hangSanhSu1 = new HangSanhSu("ss01", "Chén", 5_000, 10_000, "CTTNHH ...", consoleInput.ngayVN.parse("08/04/2022"));
+            HangHoa hangSanhSu2 = new HangSanhSu("ss02", "Chén kiểu", 5, 10_000, "CTTNHH ...", consoleInput.ngayVN.parse("20/03/2022"));
+            HangHoa hangSanhSu3 = new HangSanhSu("ss03", "Ly", 5_000, 10_000, "CTTNHH ...", consoleInput.ngayVN.parse("20/03/2022"));
+            HangHoa hangSanhSu4 = new HangSanhSu("ss04", "Tô", 5_000, 5_000, "CTTNHH ...", consoleInput.ngayVN.parse("20/03/2022"));
+            HangHoa hangSanhSu5 = new HangSanhSu("ss05", "Muỗng", 5_000, 5_000, "CTTNHH ...", consoleInput.ngayVN.parse("20/03/2022"));
+
+            quanLyHangHoa.add(hangThucPham1);
+            quanLyHangHoa.add(hangThucPham2);
+            quanLyHangHoa.add(hangThucPham3);
+            quanLyHangHoa.add(hangThucPham4);
+            quanLyHangHoa.add(hangThucPham5);
+
+            quanLyHangHoa.add(hangDienMay1);
+            quanLyHangHoa.add(hangDienMay2);
+            quanLyHangHoa.add(hangDienMay3);
+            quanLyHangHoa.add(hangDienMay4);
+            quanLyHangHoa.add(hangDienMay5);
+
+            quanLyHangHoa.add(hangSanhSu1);
+            quanLyHangHoa.add(hangSanhSu2);
+            quanLyHangHoa.add(hangSanhSu3);
+            quanLyHangHoa.add(hangSanhSu4);
+            quanLyHangHoa.add(hangSanhSu5);
+        } catch (ParseException e) {
+            System.out.println("Lỗi rồi bạn ơi!!!!");
+            e.printStackTrace();
+        }
         
-        HangHoa hangDienMay1 = new HangDienMay("dm01", "Nồi cơm điện", 2, 500_000, 12, 100);
-        HangHoa hangDienMay2 = new HangDienMay("dm02", "Ấm đun", 1_000, 100_000, 6, 100);
-        HangHoa hangDienMay3 = new HangDienMay("dm03", "Đèn", 1_000, 100_000, 6, 100);
-        HangHoa hangDienMay4 = new HangDienMay("dm04", "Quạt", 1_000, 400_000, 12, 65);
-        HangHoa hangDienMay5 = new HangDienMay("dm05", "Ổ cắm điện", 1_000, 100_000, 6, 50);
-        
-
-        HangHoa hangSanhSu1 = new HangSanhSu("ss01", "Chén", 5_000, 10_000, "CTTNHH ...", consoleInput.ngayVN.parse("08/04/2022"));
-        HangHoa hangSanhSu2 = new HangSanhSu("ss02", "Chén kiểu", 5, 10_000, "CTTNHH ...", consoleInput.ngayVN.parse("20/03/2022"));
-        HangHoa hangSanhSu3 = new HangSanhSu("ss03", "Ly", 5_000, 10_000, "CTTNHH ...", consoleInput.ngayVN.parse("20/03/2022"));
-        HangHoa hangSanhSu4 = new HangSanhSu("ss04", "Tô", 5_000, 5_000, "CTTNHH ...", consoleInput.ngayVN.parse("20/03/2022"));
-        HangHoa hangSanhSu5 = new HangSanhSu("ss05", "Muỗng", 5_000, 5_000, "CTTNHH ...", consoleInput.ngayVN.parse("20/03/2022"));
-
-        quanLyHangHoa.add(hangThucPham1);
-        quanLyHangHoa.add(hangThucPham2);
-        quanLyHangHoa.add(hangThucPham3);
-        quanLyHangHoa.add(hangThucPham4);
-        quanLyHangHoa.add(hangThucPham5);
-
-        quanLyHangHoa.add(hangDienMay1);
-        quanLyHangHoa.add(hangDienMay2);
-        quanLyHangHoa.add(hangDienMay3);
-        quanLyHangHoa.add(hangDienMay4);
-        quanLyHangHoa.add(hangDienMay5);
-
-        quanLyHangHoa.add(hangSanhSu1);
-        quanLyHangHoa.add(hangSanhSu2);
-        quanLyHangHoa.add(hangSanhSu3);
-        quanLyHangHoa.add(hangSanhSu4);
-        quanLyHangHoa.add(hangSanhSu5);
     }
 
     public void themHangHoa() {
@@ -94,7 +100,6 @@ public class DanhSachHangHoa {
         System.out.print("- Nhập mã hàng hoá cần cần thêm sau: ");
         String ma = consoleInput.input.nextLine();
 
-        // hangHoa = timHangHoaTheoMa(ma);
         int viTri = timViTri(ma);
 
         if (viTri != -1) {
@@ -103,26 +108,6 @@ public class DanhSachHangHoa {
             System.out.println("Mã hàng hoá cần thêm sau không có trong danh sách!!!!");
         }
         return;
-    }
-
-    public void sapXepTangDanTheoDonGia() {
-        // for (HangHoa hangHoa : quanLyHangHoa) {
-        //     if (hangHoa instanceof HangThucPham) {
-        //         // Collections.sort(quanLyHangHoa, (o1, o2) -> o1.getMaHang().compareToIgnoreCase(o2.getMaHang()));
-        //         Collections.sort(quanLyHangHoa, (o1, o2) -> compare(o1, o2));
-        //     } 
-        // }
-        Collections.sort(quanLyHangHoa, (o1, o2) -> compare(o1, o2));
-    }
-
-    private int compare(HangHoa o1, HangHoa o2) {
-        if (o1.getDonGia() > o2.getDonGia()) {
-            return 1;
-        } else if (o1.getDonGia() > o2.getDonGia()) {
-            return -1;
-        } else {
-            return 0;
-        }        
     }
 
     public HangHoa timHangHoaTheoMa(String maHH) {
@@ -272,11 +257,29 @@ public class DanhSachHangHoa {
     }
 
     public void sapXepTangDanTheoMa() {
-        Collections.sort(quanLyHangHoa, (o1, o2) -> o1.getMaHang().compareTo(o2.getMaHang()));
+        Collections.sort(quanLyHangHoa, (o1, o2) -> o1.getMaHang().compareToIgnoreCase(o2.getMaHang()));
     }
 
     public void sapXepGiamDanTheoMa() {
-        Collections.sort(quanLyHangHoa, (o1, o2) -> o2.getMaHang().compareTo(o1.getMaHang()));
+        Collections.sort(quanLyHangHoa, (o1, o2) -> o2.getMaHang().compareToIgnoreCase(o1.getMaHang()));
+    }
+
+    public void sapXepTangDanTheoDonGia() {
+        Collections.sort(quanLyHangHoa, (o1, o2) -> compare(o1, o2));
+    }
+    
+    public void sapXepGiamDanTheoDonGia() {
+        Collections.sort(quanLyHangHoa, (o1, o2) -> compare(o2, o1));
+    }
+
+    private int compare(HangHoa o1, HangHoa o2) {
+        if (o1.getDonGia() > o2.getDonGia()) {
+            return 1;
+        } else if (o1.getDonGia() < o2.getDonGia()) {
+            return -1;
+        } else {
+            return 0;
+        }        
     }
 
     public void ghiFile() {
@@ -328,19 +331,19 @@ public class DanhSachHangHoa {
         
         for (HangHoa hangHoa : quanLyHangHoa) {
             if (hangHoa instanceof HangThucPham) {
-                if (hangHoa.danhGiaMDBB().equalsIgnoreCase("Khó bán")) {
+                if (hangHoa.danhGiaMDBB().equalsIgnoreCase("Kho ban")) {
                     strHTPKhoBan += hangHoa.getTenHang() + "\t";
                 } else {
                     strHTP += hangHoa.getTenHang() + "\t";
                 }
             } else if (hangHoa instanceof HangDienMay){
-                if (hangHoa.danhGiaMDBB().equalsIgnoreCase("Bán được")) {
+                if (hangHoa.danhGiaMDBB().equalsIgnoreCase("Ban duoc")) {
                     strHDMBanDuoc += hangHoa.getTenHang() + "\t";
                 } else {
                     strHDM += hangHoa.getTenHang() + "\t";
                 }
             } else if (hangHoa instanceof HangSanhSu){
-                if (hangHoa.danhGiaMDBB().equalsIgnoreCase("Bán chậm")) {
+                if (hangHoa.danhGiaMDBB().equalsIgnoreCase("Ban cham")) {
                     strHSSBanCham += hangHoa.getTenHang() + "\t";
                 } else {
                     strHSS += hangHoa.getTenHang() + "\t";
