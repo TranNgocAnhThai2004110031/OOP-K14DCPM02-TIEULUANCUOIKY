@@ -101,4 +101,5 @@ public abstract class HangHoa {
     public String toString() {
         return "Ma hang: " + maHang +"\tTen hang: " + tenHang + "\tSo luong ton kho:" + soLuongTon +"\tDon gia: " + donGia;
     }
+    
 }

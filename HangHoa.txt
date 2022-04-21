@@ -1,0 +1,18 @@
+Ma hang: dm06	Ten hang: May say toc	So luong ton kho:1000	Don gia: 600000.0	Thoi gian bao hanh(thang): 12	Cong suat: 1500	Thue VAT: 60000.0	Danh gia: Khong danh gia
+Ma hang: dm04	Ten hang: Quat	So luong ton kho:1000	Don gia: 400000.0	Thoi gian bao hanh(thang): 12	Cong suat: 65	Thue VAT: 40000.0	Danh gia: Khong danh gia
+Ma hang: tp06	Ten hang: Ca Basa	So luong ton kho:100	Don gia: 170000.0	Ngay san xuat: 21/04/2022	Ngay het han: 30/04/2022	Nha cung cap: CTTNHH SX TM XNK Basa Mekong	Thue VAT: 8500.0	Danh gia: Kho ban
+Ma hang: dm05	Ten hang: O cam dien	So luong ton kho:1000	Don gia: 100000.0	Thoi gian bao hanh(thang): 6	Cong suat: 50	Thue VAT: 10000.0	Danh gia: Khong danh gia
+Ma hang: dm03	Ten hang: Dèn	So luong ton kho:1000	Don gia: 100000.0	Thoi gian bao hanh(thang): 6	Cong suat: 100	Thue VAT: 10000.0	Danh gia: Khong danh gia
+Ma hang: dm02	Ten hang: Am dun	So luong ton kho:1000	Don gia: 100000.0	Thoi gian bao hanh(thang): 6	Cong suat: 100	Thue VAT: 10000.0	Danh gia: Khong danh gia
+Ma hang: ss07	Ten hang: Binh tra	So luong ton kho:1000	Don gia: 98000.0	Ngay san xuat: CT san xuat to chen cao cap xuat khau Chau Au, My, Nhat	Ngay nhap kho: 21/04/2022	Thue VAT: 9800.0	Danh gia: Khong danh gia
+Ma hang: ss06	Ten hang: Binh hoa	So luong ton kho:1000	Don gia: 33000.0	Ngay san xuat: CT san xuat to chen cao cap xuat khau Chau Au, My, Nhat	Ngay nhap kho: 21/04/2022	Thue VAT: 3300.0	Danh gia: Khong danh gia
+Ma hang: tp03	Ten hang: Qua	So luong ton kho:30	Don gia: 30000.0	Ngay san xuat: 03/03/2022	Ngay het han: 11/11/2022	Nha cung cap: CT rau sach Da Lat GAP	Thue VAT: 1500.0	Danh gia: Kho ban
+Ma hang: tp05	Ten hang: Gao	So luong ton kho:50	Don gia: 20000.0	Ngay san xuat: 05/03/2022	Ngay het han: 11/11/2022	Nha cung cap: CTTNHH Vua Gao	Thue VAT: 1000.0	Danh gia: Kho ban
+Ma hang: tp02	Ten hang: Dau	So luong ton kho:20	Don gia: 20000.0	Ngay san xuat: 02/03/2022	Ngay het han: 11/11/2022	Nha cung cap: CT rau sach Da Lat GAP	Thue VAT: 1000.0	Danh gia: Kho ban
+Ma hang: tp04	Ten hang: Bot mi	So luong ton kho:40	Don gia: 10000.0	Ngay san xuat: 04/03/2022	Ngay het han: 11/11/2022	Nha cung cap: CTTNHH Co phan Tien Hung	Thue VAT: 500.0	Danh gia: Kho ban
+Ma hang: tp01	Ten hang: Rau	So luong ton kho:0	Don gia: 10000.0	Ngay san xuat: 01/01/2022	Ngay het han: 11/01/2022	Nha cung cap: CT rau sach Da Lat GAP	Thue VAT: 500.0	Danh gia: Khong danh gia
+Ma hang: ss03	Ten hang: Ly	So luong ton kho:5000	Don gia: 10000.0	Ngay san xuat: CT san xuat to chen cao cap xuat khau Chau Au, My, Nhat	Ngay nhap kho: 20/03/2022	Thue VAT: 1000.0	Danh gia: Ban cham
+Ma hang: ss02	Ten hang: Chen kieu	So luong ton kho:5	Don gia: 10000.0	Ngay san xuat: CT san xuat to chen cao cap xuat khau Chau Au, My, Nhat	Ngay nhap kho: 20/03/2022	Thue VAT: 1000.0	Danh gia: Khong danh gia
+Ma hang: ss01	Ten hang: Chen	So luong ton kho:5000	Don gia: 10000.0	Ngay san xuat: CT san xuat to chen cao cap xuat khau Chau Au, My, Nhat	Ngay nhap kho: 08/04/2022	Thue VAT: 1000.0	Danh gia: Ban cham
+Ma hang: ss05	Ten hang: Muong	So luong ton kho:5000	Don gia: 5000.0	Ngay san xuat: CT san xuat to chen cao cap xuat khau Chau Au, My, Nhat	Ngay nhap kho: 20/03/2022	Thue VAT: 500.0	Danh gia: Ban cham
+Ma hang: dm01	Ten hang: Loa vi tinh	So luong ton kho:1000	Don gia: 175.0	Thoi gian bao hanh(thang): 12	Cong suat: 4	Thue VAT: 17.5	Danh gia: Khong danh gia

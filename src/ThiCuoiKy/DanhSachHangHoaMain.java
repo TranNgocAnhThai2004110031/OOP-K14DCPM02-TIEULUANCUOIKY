@@ -17,7 +17,7 @@ public class DanhSachHangHoaMain {
         danhSachHangHoa.duLieuMoi();
 
         do {
-            System.out.println("\n\t-------------------------------- Menu --------------------------------");
+            System.out.println("\n\t---------------- Menu ----------------");
             System.out.println("\t1. Them hang hoa.");
             System.out.println("\t2. Xoa hang hoa.");
             System.out.println("\t3. Sua hang hoa.");
@@ -29,7 +29,7 @@ public class DanhSachHangHoaMain {
             System.out.println("\t9. Ghi file.");
             System.out.println("\t10. Doc file.");
             System.out.println("\t0. Thoat.");
-            System.out.println("\t------------------------------------------------------------------------");
+            System.out.println("\t----------------------------------------");
             System.out.print("\n- Vui long nhap lua chon: ");
             luaChon = sc.nextInt();
             sc.nextLine();
@@ -155,4 +155,5 @@ public class DanhSachHangHoaMain {
             }
         } while (luaChon != 0);
     }
+    
 }

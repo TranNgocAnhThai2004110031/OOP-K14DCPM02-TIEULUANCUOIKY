@@ -103,7 +103,6 @@ public class HangSanhSu extends HangHoa{
                 }                 
             }            
         }
-        
         return thoiGianLuuKho;
     }
     /* (non-Javadoc)

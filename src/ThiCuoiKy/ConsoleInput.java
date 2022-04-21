@@ -59,7 +59,7 @@ public class ConsoleInput {
         } 
         
         input.nextLine();
-        System.out.print("- Ban muon nhap hang hoa loai nao? \n- Hang thuc pham - 1, hàng điện may - 2, hang sanh su - 3: ");
+        System.out.print("- Ban muon nhap hang hoa loai nao? \n- Hang thuc pham - 1, hang dien may - 2, hang sanh su - 3: ");
         int loai = input.nextInt();
         input.nextLine();
         
@@ -150,7 +150,7 @@ public class ConsoleInput {
         } 
         
         input.nextLine();
-        System.out.print("- Ban muon nhap hang hoa loai nao? \n- Hang thuc pham - 1, hàng điện may - 2, hang sanh su - 3: ");
+        System.out.print("- Ban muon nhap hang hoa loai nao? \n- Hang thuc pham - 1, hang dien may - 2, hang sanh su - 3: ");
         int loai = input.nextInt();
         input.nextLine();
         

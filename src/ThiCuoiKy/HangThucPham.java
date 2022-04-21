@@ -115,4 +115,5 @@ public class HangThucPham extends HangHoa{
     public String toString() {
         return super.toString() + "\tNgay san xuat: " + ngayVN.format(ngaySanXuat) + "\tNgay het han: "+ ngayVN.format(ngayHetHan) + "\tNha cung cap: " + nhaCungCap + "\tThue VAT: " + tinhVAT() + "\tDanh gia: " + danhGiaMDBB();
     }
+    
 }

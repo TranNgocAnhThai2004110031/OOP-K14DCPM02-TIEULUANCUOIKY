@@ -85,4 +85,3 @@ public class HangDienMay extends HangHoa{
         return super.toString() + "\tThoi gian bao hanh(thang): " + thoiGianBaoHanh + "\tCong suat: " + congSuat  + "\tThue VAT: " + tinhVAT() + "\tDanh gia: " + danhGiaMDBB();
     }
 }
-
